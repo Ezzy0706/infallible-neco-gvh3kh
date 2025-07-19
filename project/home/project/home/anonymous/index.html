@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaDoc | Professional Document Translation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom CSS for enhanced design */
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+        }
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .language-flag {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 8px;      
+        }
+        .upload-area {
+            border: 2px dashed #d1d5db;
+            transition: all 0.3s ease;
+        }
+        .upload-area.active {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .progress-bar {
+            height: 6px;
+            border-radius: 3px;
+            background-color: #e5e7eb;
+            overflow: hidden;            
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40" alt="LinguaDoc logo with globe icon and speech bubbles representing translations" class="rounded-full">
+                <span class="text-xl font-bold">LinguaDoc</span>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+              <a href="#" class="hover:underline">Features</a>
+              <a href="#" class="hover:underline">Pricing</a>
+              <a href="#" class="hover:underline">About</a>
+              <a href="#" class="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition">Sign In</a>
+          </div>
+          <button class="md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+          </button>
+      </div>
+ </nav>
+  
+ <!-- Hero Section -->
+ <section class="gradient-bg text-white py-16">
+  <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeIn">Translate Documents in Seconds</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
+          Professional, accurate translations for documents in 100+ languages. Perfect for business, legal, and personal use.
+      </p>
+      <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <a href="#translate-section" class="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition inline-block mr-4">
+              Translate Now
+          </a>
+          <a href="#" class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition inline-block">
+              Learn More
+          </a>
+      </div>
+  </div> 
+</section>
+
+<!-- Main Translation Section -->
+<section id="translate-section" class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="md:flex">
+                <!-- Translation Form -->
+                <div class="p-8 md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-6">Upload Your Document</h2>
+                    
+                    <!-- Document Upload Area -->
+                    <div id="upload-container" class="upload-area rounded-lg p-8 mb-6 text-center cursor-pointer transition">
+                        <input type="file" id="file-upload" class="hidden" accept=".pdf,.doc,.docx,.txt,.odt,.rtf">
+                        <div id="upload-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-gray-400 mb
